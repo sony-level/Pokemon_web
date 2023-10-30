@@ -18,7 +18,7 @@ export class ListPokemonComponent {
     }
   
     selectPokemon(pokemonId: String) {
-      const pokemon: Pokemon|undefined = this.pokemonList.find(pokemon => pokemon.id == +pokemonId);
+      const pokemon: Pokemon|undefined = this.pokemonList.find(pokemon => pokemon.id == pokemonId);
   
       if (pokemon) {
         console.log(`Vous avez cliqué sur le pokemon, ${pokemon.name}`);

@@ -21,7 +21,7 @@ export class DetailPokemonComponent {
     const pokemonid: string|null = this.route.snapshot.paramMap.get('id');
     console.log(`Vous avez cliqué sur le pokemon, ${pokemonid}`);
     if(pokemonid){
-      this.pokemon= this.pokemonList.find(pokemon => pokemon.id == +pokemonid);
+      this.pokemon= this.pokemonList.find(pokemon => pokemon.id == pokemonid);
     }
 
   }
