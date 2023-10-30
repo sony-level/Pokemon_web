@@ -1,1 +1,16 @@
 /* This code sets the font size and color for all paragraphs within the body element */
+/* Animation du logo */
+
+.brand-logo img {
+    animation: spin 2ms linear infinite, scale 3s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}

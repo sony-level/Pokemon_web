@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../pokemon';
 import { POKEMONS } from '../mock-pokemon';
-import { ActivatedRoute } from '@angular/router'; // on est aller chercher le service ActivatedRoute pour l'injecter dans mon composant via mon constructor qui permet de rendre le service route disponible dans mon composant
+import { ActivatedRoute , Router } from '@angular/router'; // on est aller chercher le service ActivatedRoute pour l'injecter dans mon composant via mon constructor qui permet de rendre le service route disponible dans mon composant
 
 @Component({
   selector: 'app-detail-pokemon',
@@ -13,7 +13,7 @@ export class DetailPokemonComponent {
   pokemonList: Pokemon[];
   pokemon : Pokemon|undefined
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router : Router) {}
 
   ngOnInit(){
     this.pokemonList = POKEMONS;
@@ -23,6 +23,12 @@ export class DetailPokemonComponent {
     if(pokemonid){
       this.pokemon= this.pokemonList.find(pokemon => pokemon.id == +pokemonid);
     }
+
+  }
+
+  goback(){
+    this.router.navigate(['/pokemons'])
+    window.history.back();
 
   }
 
