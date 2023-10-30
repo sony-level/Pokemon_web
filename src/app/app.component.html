@@ -3,35 +3,35 @@
 
 <h1 class="center">Welcome to my Pokemon App! Level sony dilane </h1>
 
-<h2>Pokemon List</h2>
+<h2 class="center">Pokemon List</h2>
       <input
 
-  #input
-  (keyup.enter)="selectPokemon(input.value)"
-  type="number"
+          #input
+          (keyup.enter)="selectPokemon(input.value)"
+          type="number"
 
         />
-        <p *ngIf="pokemonSelected">
+        <p class="center" *ngIf="pokemonSelected">
           Vous avez selectionner: {{ pokemonSelected.name }}
         </p>
 
-        <p *ngIf="!pokemonSelected">
+        <p class="center" *ngIf="!pokemonSelected">
           Aucun pokemon n'a été trouvé.
         </p>
 <div class="container">
   <div class="row">
     <div *ngFor="let pokemon of pokemonList" class="col m3 s4">
-      <div class="card horizontal" click="selectPokemon(pokemon)" appBorderCard>
+      <div class="card horizontal"   appBorderCard>
         <div class="card-image">
-          <img [src]="pokemon.picture" />
-          <div class="card-stacked">
+          <img [src]="pokemon.picture" [alt]="pokemon.picture" >
+        </div>
             <div class="card-content">
-            <p>{{pokemon.name}}</p>
-            <p><small>{{pokemon.created}}</small></p>
+              <div class="card-stacked">
+                <p>{{pokemon.name}}</p>
+                <p><small>{{pokemon.created | date }}</small></p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

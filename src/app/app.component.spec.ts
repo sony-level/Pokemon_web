@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   it(`should have as title 'pokemon_web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.pokemonList[0]).toEqual('pokemon_web app is running!');
+    expect(app.pokemonList).toEqual('pokemon_web app is running!');
   });
 
   it('should render title', () => {

@@ -1,9 +1,13 @@
-import { Directive , ElementRef, HostListener } from '@angular/core';
+import { Directive , ElementRef, HostListener , Input } from '@angular/core';
 
 @Directive({
   selector: '[appBorderCard]'
 })
 export class BorderCardDirective {
+
+  private InitialColor: string = '#000000';
+  private defaultColor: string = '#f5f5f5';
+  private defaultHeight: number = 180;
 
   constructor(private el: ElementRef) {
     this.setBorder('##FF0000');
@@ -23,6 +27,8 @@ export class BorderCardDirective {
     this.setBorder('#f5f5F5');
 
    }
+@Input('appBorderCard') borderColor: string; // avec alias
+@Input() appBorderCard: string; //sans alias
 setHeight(height: number){
   this.el.nativeElement.style.height=`$(height)px`;
 }
