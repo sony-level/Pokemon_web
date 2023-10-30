@@ -15,7 +15,7 @@ export class BorderCardDirective {
     this.el.nativeElement.style.backgroundColor='#009688';
     this.el.nativeElement.style.color='#FFF';
     this.el.nativeElement.style.fontWeight='bolder';
-    this.el.nativeElement.style.padding='0.1rem';
+    this.el.nativeElement.style.padding='0.5rem';
     this.el.nativeElement.style.margin='0.5rem';
     this.el.nativeElement.style.borderRadius='0.9rem';
    }

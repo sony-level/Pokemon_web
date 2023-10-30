@@ -1,0 +1,43 @@
+<!-- By: Level sony dilane -->
+
+<!-- Pokemon web -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<router-outlet></router-outlet>
+
+<h2 class="center">Pokemon List</h2>
+      <input
+
+          #input
+          (keyup.enter)="selectPokemon(input.value)"
+          type="number"
+
+        />
+        <p class="center" *ngIf="pokemonSelected">
+          Vous avez selectionner: {{ pokemonSelected.name }}
+        </p>
+
+        <p class="center" *ngIf="!pokemonSelected">
+          Aucun pokemon n'a été trouvé.
+        </p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonList" class="col m4 s4 ">
+      <div class="card horizontal" appBorderCard>
+        <div class="card-image">
+          <img [src]="pokemon.picture" alt=""/>
+        </div>
+            <div class="card-content">
+              <div class="card-stacked">
+                <p>{{pokemon.name}}</p>
+                <p><small>{{pokemon.created | date }}</small></p>
+               <span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor}}">
+                {{ type }}
+               </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
