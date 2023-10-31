@@ -1,0 +1,60 @@
+/* Utilisation de la bibliothèque Materialize pour formater le titre */
+h2.center {
+    font-size: 2em;
+    color: #3949ab;
+  }
+  
+  /* Style du champ de recherche */
+  input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3949ab;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  /* Style du paragraphe indiquant le Pokemon sélectionné */
+  p.center {
+    font-size: 1.2em;
+    color: #3949ab;
+  }
+  
+  /* Style du paragraphe lorsque aucun Pokemon n'est sélectionné */
+  p.center.ng-if {
+    font-size: 1.2em;
+    color: #f44336; /* Couleur rouge */
+  }
+  
+  /* Style de la carte Pokemon */
+  .card.horizontal {
+    border: 2px solid #3949ab;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .card-image img {
+    max-width: 100%;
+  }
+  
+  /* Style des types de Pokemon */
+  span.pokemonTypeColor {
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #fff;
+  }
+  
+  /* Couleur des types de Pokemon */
+  .bug {
+    background-color: #a6d315; /* Vert */
+  }
+  
+  .fire {
+    background-color: #f44747; /* Rouge */
+  }
+  
+  .water {
+    background-color: #3fc3f4; /* Bleu */
+  }
