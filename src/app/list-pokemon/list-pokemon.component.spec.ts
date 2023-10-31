@@ -17,4 +17,4 @@ describe('ListPokemonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 
